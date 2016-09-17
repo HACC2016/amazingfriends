@@ -1,65 +1,80 @@
 <div class="row">
-  <div class="large-12 columns">
-    <div class="small-3 columns"> <img src="{{fields.profile_img}}"></div>
-    <div class="small-9 columns">
-      <h2>{{fields.full_name}}</h2>
-      <p>{{fields.birth_date}}</p>
+  <div class="large-9 small-centered columns">
+    <div class="row head-profile">
+      <div class="small-4 columns">
+        <div class="circle" style="background-image: url('{{fields.profile_img}}');"></div>
+      </div>
+      <div class="small-8 columns person">
+        <h2>{{fields.full_name}}</h2>
+        <p>{{fields.birth_date}}</p>
+      </div>
     </div>
-  </div>
-  <div class="large-12 columns">
-    <div class="small-12 medium-6 columns">
-      <h4>Visiting Hours</h4>
-      <p>{{fields.visiting_hours}}</p>
-    </div>
-    <div class="small-12 medium-6 columns">
-      <h4>Call Hours</h4>
-      <p>{{fields.call_hours}}</p>
-    </div>
-    <div class="small-12 columns">
-      <h4>Diet Restrictions</h4>
-      <p>{{fields.diet_restrictions}}</p>
-    </div>
-    <div class="small-12 columns">
-      <h4>Medical Conditions</h4>
-      <p>{{fields.medical_conditions}}</p>
-    </div>
-    <div class="small-12 columns">
-      <h4>Medications</h4>
-      <p>{{fields.medications}}</p>
-    </div>
-    <div class="large-12 column">
-      <ul class="accordion" data-accordion data-multi-expand="true">
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Medication Schedule</a>
-          <div class="accordion-content" data-tab-content>
-            <p>{{fields.medications_schedule}}</p>
+    <div class="row">
+      <div class="large-11 small-centered columns">
+        <div class="row">
+          <div class="small-12 medium-4 columns">
+            <h4>Emergency Contact</h4>
+            <ul>
+              <li>Dr. Tan: 808.339.0092</li>
+              <li>Ms Terry Lilac: 808.392.1100</li>
+            </ul>
           </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Errand List</a>
-          <div class="accordion-content" data-tab-content>
-            <p>{{fields.medications_schedule}}</p>
+          <div class="small-12 medium-4 columns">
+            <h4>Visiting Hours</h4>
+            <p>{{fields.visiting_hours}}</p>
           </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">My Daily Schedule</a>
-          <div class="accordion-content" data-tab-content>
-            <p>{{fields.medications_schedule}}</p>
+          <div class="small-12 medium-4 columns">
+            <h4>Call Hours</h4>
+            <p>{{fields.call_hours}}</p>
           </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Care Givers</a>
-          <div class="accordion-content" data-tab-content>
-            <p>{{fields.medications_schedule}}</p>
+          <div class="small-12 columns">
+            <h4>Diet Restrictions</h4>
+            <p>{{fields.diet_restrictions}}</p>
           </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Social Media Feeds</a>
-          <div class="accordion-content" data-tab-content>
-            <p>{{fields.medications_schedule}}</p>
+          <div class="small-12 columns">
+            <h4>Medical Conditions</h4>
+            <p>{{fields.medical_conditions}}</p>
           </div>
-        </li>
-      </ul>
+          <div class="small-12 columns">
+            <h4>Medications</h4>
+            <p>{{fields.medications}}</p>
+          </div>
+          <div class="large-12 columns">
+            <ul class="accordion" data-accordion data-allow-all-closed="true">
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Medication Schedule</a>
+                <div class="accordion-content" data-tab-content>
+                  <p>{{fields.medications_schedule}}</p>
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Errand List</a>
+                <div class="accordion-content" data-tab-content>
+                  <p>{{fields.medications_schedule}}</p>
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">My Daily Schedule</a>
+                <div class="accordion-content" data-tab-content>
+                  <p>{{fields.medications_schedule}}</p>
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Care Givers</a>
+                <div class="accordion-content" data-tab-content>
+                  <p>{{fields.medications_schedule}}</p>
+                </div>
+              </li>
+              <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Social Media Feeds</a>
+                <div class="accordion-content" data-tab-content>
+                  <p>{{fields.medications_schedule}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
