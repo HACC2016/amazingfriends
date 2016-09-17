@@ -1,16 +1,24 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
   <head>
-    <link rel="stylesheet" href="/assets/styles/foundation5.css">
-    <meta charset="UTF-8">
-    <title>WELCOME</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Citizen</title>
+
+    <link rel="stylesheet" href="/assets/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/styles/foundation6.css">
+
+    <script src="/assets/scripts/modernizr.js"></script>
   </head>
   <body>
-    <div class="main-container">
-      <header> HEADER STUFF HERE</header>
-      <div class="main-content">I AM A BEAUTIFUL HOME PAGE</div>
-        {{{ template }}}
-      <footer> FOOTER STUFF HERE</footer>
-    </div>
+    {{{ template }}}
+    <script src="/assets/scripts/jquery.js"></script>
+    <script src="/assets/scripts/foundation6.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
