@@ -1,3 +1,4 @@
 .airship
 static_maps
 node_modules
+dist
