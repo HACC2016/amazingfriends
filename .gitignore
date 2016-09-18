@@ -1,4 +1,5 @@
 .airship
 static_maps
 node_modules
+bower_components
 dist

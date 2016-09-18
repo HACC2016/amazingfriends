@@ -1,0 +1,21 @@
+{
+  "name": "mantle",
+  "description": "Help Elders.",
+  "main": "index.js",
+  "authors": [
+    "Amazing Friends"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "homepage": "https://github.com/HACC2016/amazingfriends",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
