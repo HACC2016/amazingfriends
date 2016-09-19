@@ -1,5 +1,31 @@
-<div> ITEM INFO
-  <div> {{fields.title}} </div>
-  <div> {{fields.content}} </div>
-  <div> {{fields.resource_link}} </div>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">Mantle</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/elders">Elders</a></li>
+      <li><a href="/caregivers">Caregivers</a></li>
+      <li><a href="/maps">Maps</a></li>
+      <li><a href="/knowledge-base">Resources</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout small">
+  <div class="row column text-center">
+    <h3>{{fields.title}}</h3>
+    <a href="/{{aerostat_collection.public_path}}" class="button medium">Back</a>
+  </div>
+</div>
+ 
+<div class="row medium-12 large-12 columns">
+  <div class="row column">
+    {{{fields.content}}}
+        <div class="callout">
+      {{fields.resource_link_1}}
+    </div>
+  </div>
 </div>

@@ -1,6 +1,67 @@
-MAP STUFF 
-<div>
-  <div> {{fields.title}} </div>
-  <div> {{fields.content}} </div>
-  <div> {{fields.resource_link}} </div>
+<!-- Load Leaflet from CDN-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />
+<link rel="stylesheet" href="/assets/styles/styles.css" />
+<script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet-src.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.0.0/leaflet.ajax.min.js"></script>
+
+<!-- Load Esri Leaflet from CDN -->
+<script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.2/esri-leaflet.js"></script>
+
+<!-- MOVE THIS OUT TO STYLE SHEET -->
+<style>
+  #map { position: relative; top:0; bottom:0; right:0; left:0; height:1000px;}
+</style>
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">Mantle</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/elders">Elders</a></li>
+      <li><a href="/caregivers">Caregivers</a></li>
+      <li><a href="/maps">Maps</a></li>
+      <li><a href="/knowledge-base">Resources</a></li>
+    </ul>
+  </div>
 </div>
+
+<div class="callout small">
+  <div class="row column text-center">
+    <h3>{{fields.title}}</h3>
+    <a href="/{{aerostat_collection.public_path}}" class="button medium">Back</a>
+  </div>
+</div>
+ 
+<div class="row medium-12 large-12 columns">
+  <div class="row column" id="map">
+    <div class="callout">
+      Source: Honolulu Open Data ARCGIS
+    </div>
+  </div>
+</div>
+
+<!-- Jquery 2.2.2 -->
+<script src="/assets/scripts/jquery.js"></script> 
+<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+<script src="/assets/scripts/foundation.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
+<!-- EXPORT THIS OUT TO ITS OWN FILE LATER -->
+<script>
+  var map = L.map("map").setView([21.46457, -157.98203], 11);
+
+  L.esri.basemapLayer("Streets").addTo(map);
+  var geojsonLayer = new L.GeoJSON.AJAX("{{fields.arcgis_data_endpoint}}", {onEachFeature:popUp}, {style:myStyle});
+  var myStyle = {"color": "#ff7800", "weight": 4, "opacity": 0.65};       
+  geojsonLayer.addTo(map);
+
+  function popUp(feature, layer) {
+    layer.bindPopup(feature.properties.NAME);
+  }
+
+</script>
