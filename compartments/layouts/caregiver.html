@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantle</title>
+
+    <link rel="stylesheet" href="/assets/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/styles/profile.css">
     <link rel="stylesheet" href="/assets/styles/styles.css">
-    <meta charset="UTF-8">
-    <title>WELCOME</title>
+    <link href='/assets/scripts/foundation-icons.css' rel='stylesheet' type='text/css'>
+
+    <script src="/assets/scripts/modernizr.min.js"></script>
   </head>
   <body>
-    <div class="main-container">
-      <header> HEADER STUFF HERE</header>
-      <div class="main-content">I AM A BEAUTIFUL HOME PAGE</div>
-        {{{ template }}}
-      <footer> FOOTER STUFF HERE</footer>
-    </div>
+    {{{ template }}}
+    <script src="/assets/scripts/jquery.js"></script>
+    <script src="/assets/scripts/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
