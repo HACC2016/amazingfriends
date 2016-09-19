@@ -3,4 +3,11 @@ static_maps
 node_modules
 bower_components
 dist
+dist/Mantle-linux-armv7l
+dist/Mantle-linux-ia32
+dist/Mantle-linux-x64
+dist/Mantle-win32-ia32
+dist/Mantle-win32-x64
+dist/Mantle-mas-x64
+dist/Mantle-darwin-x64
 tmp
