@@ -1,0 +1,16 @@
+<div class="callout small primary">
+    <div class="row column text-center">
+      <h3>Knowledge Base: Categories</h3>
+    </div>
+  </div>
+  <div class="row" id="content">
+  <div class="columns">
+  {{#each categories}}
+    <div class="blog-post callout text-center">
+      <a href="/{{../public_path}}/categories/{{permalink}}">
+        <h3>{{ title }}</h3>
+      </a>
+    </div>
+  {{/each}}
+  </div>
+</div>
