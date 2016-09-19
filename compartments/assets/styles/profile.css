@@ -1,5 +1,6 @@
 .columns {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
+  margin-top: 10px;
 }
 
 .circle{
@@ -18,4 +19,8 @@
 
 .head-profile{
   background-color: salmon;
+}
+
+h1,h2{
+  text-transform: uppercase;
 }
