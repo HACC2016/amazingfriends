@@ -1,25 +1,50 @@
-<div class="row medium-12 large-12 columns">
-  <div class="row column">
+<div class="row top-margin">
+  <div class="small-12">
+    <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+        <li><a href="/{{aerostat_collection.public_path}}">Back</a></li>
+        <li><a href="/">Home</a></li>
+        <li>
+          <span class="show-for-sr">Current: </span> Sign up
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-6 small-12 columns">
     <div class="text-center">
       <br>
       <h3>CURRENTLY IN CLOSED TESTING!</h3>
       <h5>Sign up to the mailing list for more updates!</h5>
     </div>
-    <form action="mailto:metaturtlebox+1@gmail.com" method="post" enctype="text/plain">
-      Name:<br>
-      <input type="text" name="name"><br>
-      E-mail:<br>
-      <input type="text" name="mail"><br>
-      <div class="row columns">
-        <div class="column text-right">
-          <input class="button" type="submit" value="Send">
-          <input class="button" type="reset" value="Reset">
-        </div>
-        <div class="column text-right">
-            <h3>{{fields.title}}</h3>
-            <a href="/{{aerostat_collection.public_path}}" class="button medium">Back</a>
-        </div>
+    <div class="row">
+      <div class="columns small-10 small-centered">
+        <form action="mailto:metaturtlebox+1@gmail.com" method="post" enctype="text/plain">
+          Name:<br>
+          <input type="text" name="name"><br>
+          E-mail:<br>
+          <input type="text" name="mail"><br>
+          <div class="row columns">
+            <div class="column text-right">
+              <input class="button" type="submit" value="Send">
+              <input class="button" type="reset" value="Reset">
+            </div>
+            <div class="column text-right">
+                <h3>{{fields.title}}</h3>
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+  </div>
+  <div class="medium-6 small-12 columns">
+    <div class="text-center">
+      <br>
+      <h3 class="uppercase">Try our demo</h3>
+      <h5>View the dashboard and member profile features</h5>
+      <a href="/elders" class="button large top-margin">Login as a Caregiver</a>
+    </div>
   </div>
 </div>
