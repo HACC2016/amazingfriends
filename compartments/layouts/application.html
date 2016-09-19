@@ -11,7 +11,37 @@
 
   </head>
   <body>
-  <div class="top-bar">
+  <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+
+  <div class="top-bar" id="example-menu">
+    <div class="top-bar-left">
+      <a class="menu-text"href="/">Mantle</a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+        
+        <li><a href="/elders">Elders</a></li>
+        <li><a href="/caregivers">Caregivers</a></li>
+        <li>
+          <a href="#">Resources</a>
+          <ul class="menu vertical">
+            <li><a href="/maps">Maps</a></li>
+            <li><a href="/knowledge-base">Topics</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/sign-up" class="button small">Sign Up</a>
+        </li>
+        <li>
+          <a href="/admin" class="button small hollow">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!--   <div class="top-bar">
     <div class="top-bar-left">
       <ul class="menu">
         <li class="menu-text"><a href="/">Mantle</a></li>
@@ -26,7 +56,7 @@
       </ul>
     </div>
   </div>
- 
+  -->
     {{{ template }}}
     <hr>
     <div class="row column">
