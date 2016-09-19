@@ -1,1 +1,41 @@
-<div>HI THIS IS A SIGNUP PAGE</div>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">Mantle</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/elders">Elders</a></li>
+      <li><a href="/caregivers">Caregivers</a></li>
+      <li><a href="/maps">Maps</a></li>
+      <li><a href="/knowledge-base">Resources</a></li>
+    </ul>
+  </div>
+</div>
+ 
+<div class="row medium-12 large-12 columns">
+  <div class="row column">
+    <div class="text-center">
+      <br>
+      <h3>CURRENTLY IN CLOSED TESTING!</h3>
+      <h5>Sign up to the mailing list for more updates!</h5>
+    </div>
+    <form action="mailto:metaturtlebox+1@gmail.com" method="post" enctype="text/plain">
+      Name:<br>
+      <input type="text" name="name"><br>
+      E-mail:<br>
+      <input type="text" name="mail"><br>
+      <div class="row columns">
+        <div class="column text-right">
+          <input class="button" type="submit" value="Send">
+          <input class="button" type="reset" value="Reset">
+        </div>
+        <div class="column text-right">
+            <h3>{{fields.title}}</h3>
+            <a href="/{{aerostat_collection.public_path}}" class="button medium">Back</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
