@@ -51,13 +51,201 @@
               <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">Errand List</a>
                 <div class="accordion-content" data-tab-content>
-                  <p>{{fields.medications_schedule}}</p>
+                  <!-- START OF TODO -->
+                  <section class="todoapp">
+                    <header class="header">
+                      <label for="new-todo">TODO</label>
+                      <input class="new-todo" placeholder="What needs to be done?" autofocus>
+                    </header>
+                    <section style="display:none" class="main">
+                      <input class="toggle-all" type="checkbox">
+                      <label for="toggle-all">Mark all as complete</label>
+                      <ul class="todo-list"></ul>
+                      <footer class="footer">
+                        <span class="todo-count"></span>
+                        <div class="filters">
+                          <a href="#/" class="selected">All</a>
+                          <a href="#/active">Active</a>
+                          <a href="#/completed">Completed</a>
+                        </div>
+                        <button class="clear-completed">Clear completed</button>
+                      </footer>
+                    </section>
+                  </section>
+                  <!-- END OF TODO -->
                 </div>
               </li>
               <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">My Daily Schedule</a>
-                <div class="accordion-content" data-tab-content>
-                  <p>{{fields.medications_schedule}}</p>
+                <div class="accordion-content" ng-app="mwl.calendar.docs" data-tab-content>
+                  <!-- START CALENDAR -->
+                  <div ng-controller="KitchenSinkCtrl as vm">
+                    <h2 class="text-center">{{ vm.calendarTitle }}</h2>
+
+                    <div class="row">
+
+                      <div class="col-md-6 text-center">
+                        <div class="btn-group">
+
+                          <button
+                            class="btn btn-primary"
+                            mwl-date-modifier
+                            date="vm.viewDate"
+                            decrement="vm.calendarView">
+                            Previous
+                          </button>
+                          <button
+                            class="btn btn-default"
+                            mwl-date-modifier
+                            date="vm.viewDate"
+                            set-to-today>
+                            Today
+                          </button>
+                          <button
+                            class="btn btn-primary"
+                            mwl-date-modifier
+                            date="vm.viewDate"
+                            increment="vm.calendarView">
+                            Next
+                          </button>
+                        </div>
+                      </div>
+
+                      <br class="visible-xs visible-sm">
+
+                      <div class="col-md-6 text-center">
+                        <div class="btn-group">
+                          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">Year</label>
+                          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">Month</label>
+                          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">Week</label>
+                          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">Day</label>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <br>
+
+                    <mwl-calendar
+                      events="vm.events"
+                      view="vm.calendarView"
+                      view-title="vm.calendarTitle"
+                      view-date="vm.viewDate"
+                      on-event-click="vm.eventClicked(calendarEvent)"
+                      on-event-times-changed="vm.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+                      cell-is-open="vm.isCellOpen"
+                      day-view-start="06:00"
+                      day-view-end="22:59"
+                      day-view-split="30"
+                      cell-modifier="vm.modifyCell(calendarCell)">
+                    </mwl-calendar>
+
+                    <br><br><br>
+
+                    <h3 id="event-editor">
+                      Edit events
+                      <button
+                        class="btn btn-primary pull-right"
+                        ng-click="vm.addEvent()">
+                        Add new
+                      </button>
+                      <div class="clearfix"></div>
+                    </h3>
+
+                    <table class="table table-bordered">
+
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <!-- <th>Primary color</th> -->
+                          <!-- <th>Secondary color</th> -->
+                          <th>Starts at</th>
+                          <th>Ends at</th>
+                          <th>Remove</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr ng-repeat="event in vm.events track by $index">
+                          <td>
+                            <input
+                              type="text"
+                              class="form-control"
+                              ng-model="event.title">
+                          </td>
+                          <!-- <td>
+                            <input class="form-control" colorpicker type="text" ng-model="event.color.primary">
+                          </td>
+                          <td>
+                            <input class="form-control" colorpicker type="text" ng-model="event.color.secondary">
+                          </td> -->
+                          <td>
+                            <p class="input-group" style="max-width: 250px">
+                              <input
+                                type="text"
+                                class="form-control"
+                                readonly
+                                uib-datepicker-popup="dd MMMM yyyy"
+                                ng-model="event.startsAt"
+                                is-open="event.startOpen"
+                                close-text="Close" >
+                              <span class="input-group-btn">
+                                <button
+                                  type="button"
+                                  class="btn btn-default"
+                                  ng-click="vm.toggle($event, 'startOpen', event)">
+                                  <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                              </span>
+                            </p>
+                            <div
+                              uib-timepicker
+                              ng-model="event.startsAt"
+                              hour-step="1"
+                              minute-step="15"
+                              show-meridian="true">
+                            </div>
+                          </td>
+                          <td>
+                            <p class="input-group" style="max-width: 250px">
+                              <input
+                                type="text"
+                                class="form-control"
+                                readonly
+                                uib-datepicker-popup="dd MMMM yyyy"
+                                ng-model="event.endsAt"
+                                is-open="event.endOpen"
+                                close-text="Close">
+                              <span class="input-group-btn">
+                                <button
+                                  type="button"
+                                  class="btn btn-default"
+                                  ng-click="vm.toggle($event, 'endOpen', event)">
+                                  <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                              </span>
+                            </p>
+                            <div
+                              uib-timepicker
+                              ng-model="event.endsAt"
+                              hour-step="1"
+                              minute-step="15"
+                              show-meridian="true">
+                            </div>
+                          </td>
+                          <td>
+                            <button
+                              class="btn btn-danger"
+                              ng-click="vm.events.splice($index, 1)">
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+
+                    </table>
+                  </div>
+                  <!-- END CALENDAR -->
                 </div>
               </li>
               <li class="accordion-item" data-accordion-item>
@@ -79,4 +267,131 @@
     </div>
   </div>
 </div>
+<!-- TODO -->
+<script src="/assets/scripts/todo/bundle.js"></script>
+<!-- CALENDAR -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.4/interact.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js"></script>
+<script src="//cdn.rawgit.com/jkbrzt/rrule/v2.1.0/lib/rrule.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-colorpicker/3.0.25/js/bootstrap-colorpicker-module.min.js"></script>
+<script src="//mattlewis92.github.io/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="//cdnjs.cloudflare.com/ajax/libs/angular-bootstrap-colorpicker/3.0.25/css/colorpicker.min.css" rel="stylesheet">
+<link href="//mattlewis92.github.io/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+<!-- REINSTANCED TO OVERWRITE BOOTSTRAP STYLES SINCE THIS CALENDAR PLUGIN DEPENDS ON BOOTSTRAP-->
+<link href="/assets/styles/styles.css" rel="stylesheet">
+<script>
+  angular.module('mwl.calendar.docs', ['mwl.calendar', 'ngAnimate', 'ui.bootstrap', 'colorpicker.module']);
+  angular
+    .module('mwl.calendar.docs') //you will need to declare your module with the dependencies ['mwl.calendar', 'ui.bootstrap', 'ngAnimate']
+    .controller('KitchenSinkCtrl', function(moment, alert, calendarConfig) {
 
+      var vm = this;
+
+      //These variables MUST be set as a minimum for the calendar to work
+      vm.calendarView = 'month';
+      vm.viewDate = new Date();
+      var actions = [{
+        label: '<i class=\'glyphicon glyphicon-pencil\'></i>',
+        onClick: function(args) {
+          alert.show('Edited', args.calendarEvent);
+        }
+      }, {
+        label: '<i class=\'glyphicon glyphicon-remove\'></i>',
+        onClick: function(args) {
+          alert.show('Deleted', args.calendarEvent);
+        }
+      }];
+      // SEEDS MOCK DATA
+      vm.events = [
+        {
+          title: 'An event',
+          color: calendarConfig.colorTypes.warning,
+          startsAt: moment().startOf('week').subtract(2, 'days').add(8, 'hours').toDate(),
+          endsAt: moment().startOf('week').add(1, 'week').add(9, 'hours').toDate(),
+          draggable: true,
+          resizable: true,
+          actions: actions
+        }, {
+          title: '<i class="glyphicon glyphicon-asterisk"></i> <span class="text-primary">Another event</span>, with a <i>html</i> title',
+          color: calendarConfig.colorTypes.info,
+          startsAt: moment().subtract(1, 'day').toDate(),
+          endsAt: moment().add(5, 'days').toDate(),
+          draggable: true,
+          resizable: true,
+          actions: actions
+        }, {
+          title: 'This is a really long event title that occurs on every year',
+          color: calendarConfig.colorTypes.important,
+          startsAt: moment().startOf('day').add(7, 'hours').toDate(),
+          endsAt: moment().startOf('day').add(19, 'hours').toDate(),
+          recursOn: 'year',
+          draggable: true,
+          resizable: true,
+          actions: actions
+        }
+      ];
+
+      vm.isCellOpen = true;
+
+      vm.addEvent = function() {
+        vm.events.push({
+          title: 'New event',
+          startsAt: moment().startOf('day').toDate(),
+          endsAt: moment().endOf('day').toDate(),
+          color: calendarConfig.colorTypes.important,
+          draggable: true,
+          resizable: true
+        });
+      };
+
+      vm.eventClicked = function(event) {
+        alert.show('Clicked', event);
+      };
+
+      vm.eventEdited = function(event) {
+        alert.show('Edited', event);
+      };
+
+      vm.eventDeleted = function(event) {
+        alert.show('Deleted', event);
+      };
+
+      vm.eventTimesChanged = function(event) {
+        alert.show('Dropped or resized', event);
+      };
+
+      vm.toggle = function($event, field, event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        event[field] = !event[field];
+      };
+
+    });
+</script>
+<script>
+  angular
+  .module('mwl.calendar.docs')
+  .factory('alert', function($uibModal) {
+
+    function show(action, event) {
+      return $uibModal.open({
+        templateUrl: 'modalContent.html',
+        controller: function() {
+          var vm = this;
+          vm.action = action;
+          vm.event = event;
+        },
+        controllerAs: 'vm'
+      });
+    }
+
+    return {
+      show: show
+    };
+
+  });    
+</script>

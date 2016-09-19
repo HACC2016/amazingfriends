@@ -11,42 +11,45 @@
 
   </head>
   <body>
-  <div class="top-bar">
+  <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+
+  <div class="top-bar" id="example-menu">
     <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text"><a href="/">Mantle</a></li>
-      </ul>
+      <a class="menu-text"href="/">Mantle</a>
     </div>
     <div class="top-bar-right">
-      <ul class="menu">
+      <ul class="dropdown menu" data-dropdown-menu>
+        
         <li><a href="/elders">Elders</a></li>
         <li><a href="/caregivers">Caregivers</a></li>
-        <li><a href="/maps">Maps</a></li>
-        <li><a href="/knowledge-base">Resources</a></li>
+        <li>
+          <a href="#">Resources</a>
+          <ul class="menu vertical">
+            <li><a href="/maps">Maps</a></li>
+            <li><a href="/knowledge-base">Topics</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/sign-up" class="button small">Sign Up</a>
+        </li>
+        <li>
+          <a href="/admin" class="button small hollow">Login</a>
+        </li>
       </ul>
     </div>
+  </div> 
+  {{{ template }}}
+  <div class="row columns text-center">
+    <a class="menu" href="/">Amazing Friends ©2016</a>
   </div>
- 
-    {{{ template }}}
-    <hr>
-    <div class="row column">
-      <a class="menu" href="/">Amazing Friends ©2016</a>
-    </div>
-  <!--   <hr>
-    <div class="row column">
-    <ul class="menu">
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
-    </ul>
-    </div> -->
-
     <script src="/assets/scripts/jquery.js"></script>
     <script src="/assets/scripts/foundation.js"></script>
     <script>
       $(document).foundation();
     </script>
-    
   </body>
 </html>
