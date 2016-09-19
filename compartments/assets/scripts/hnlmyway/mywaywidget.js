@@ -4,7 +4,7 @@ if (!window.jQuery) {
 }
 
 var $html = '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">';
-$html += '<link rel="stylesheet" type="text/css" href="https://www2.honolulu.gov/honolulumyway/css/jquery.datetimepicker.css">'
+$html += '<link rel="stylesheet" type="text/css" href="https://www2.honolulu.gov/honolulumyway/css/jquery.datetimepicker.css">';
 
 $html += '<style>#trip_planner_mode {text-align:center; margin-left:15px} .trip_planner_mode {padding-top: 5px; padding-bottom: 5px; margin: 5px; margin-bottom: 0px;width: 20px;}';
 $html += '.trip_planner_mode:hover {color: rgb(58, 132, 223);} .trip_planner_selected_mode {color: rgb(58, 132, 223); border-bottom:2px solid rgb(58,132,223);}';
@@ -36,7 +36,7 @@ $html += '<br>';
 $html += '<i class = "fa fa-fw fa-road"></i>';
 $html += '<select id = "prefer_type" tabindex = "0" >';
 $html += '<option value = "BEST">Best route</option>';
-$html += '<option value = "TRANFERS">Fewer tranfers</option>';
+$html += '<option value = "TRANSFERS">Fewer transfers</option>';
 $html += '<option value = "WALKING">Less walking</option>';
 $html += '</select></div>';
 $html += '<button type="button" class="button" id="tripplanner_submit">Get Directions</button>';
