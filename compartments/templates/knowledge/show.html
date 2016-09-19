@@ -24,8 +24,13 @@
 <div class="row medium-12 large-12 columns">
   <div class="row column">
     {{{fields.content}}}
-        <div class="callout">
-      {{fields.resource_link_1}}
+    <div class="callout">
+      {{#each fields.resource_link_1}}
+        Source:
+        <a href="{{url}}">
+          {{caption}}
+        </a>
+      {{/each}}
     </div>
   </div>
 </div>
