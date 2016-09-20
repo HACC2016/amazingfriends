@@ -6,10 +6,10 @@
 [Win-32-x64](https://www.dropbox.com/s/a1ckw7ejm39jre4/Mantle-win32-x64.zip?dl=0)
 
 ## Inspiration
+Created for the Age-Friendly challenge of HACC 2016. Trying to find a way we can find better ways to help out the elderly with web technologies.
+
 The inspiration for our app came from the experience of our own family trying their best to support grandma after losing her mobility and independence. 
 Grandma wanted to live in the home that provided her many comforts and fond family memories. Grandpa recently passed so grandma was very lonely and depressed. The family tried very hard to take care of grandma but it was stressful to coordinate care and family felt like some were investing more than others. Since group communication was done mainly through email and phone calls, it was difficult keeping the whole family on the same page. There were many arguments due to miscommunications. Everyone just wanted to care for grandma, but the stress and breakdown in family communication took away from the ability of the family to provide grandma the best support at times.
-
-Created for the Age-Friendly challenge of HACC 2016. Trying to find a way we can find better ways to help out the elderly with web technologies.
 
 ## What it does
 Mantle provides a simple place to organize information and coordinate family to provide the highest quality of life to a loved one.
@@ -58,4 +58,4 @@ Push notifications.
 Email notifications.  // Currently not fully implemented
 
 **AIRSHIP AHOY!**
-[Amazing Friends @ Airship](amazingfriends.airshipcms.io)
+[Amazing Friends](amazingfriends.airshipcms.io)
