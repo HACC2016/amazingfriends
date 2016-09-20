@@ -1,5 +1,6 @@
 .airship
 static_maps
+landing_page_content
 node_modules
 bower_components
 dist
