@@ -1,6 +1,6 @@
 # MANTLE - TEAM AMAZING FRIENDS
 
-####ACCESS IT VIA DESKTOP APP!
+####TRY IT VIA DESKTOP APP!
 
 [OSX](https://www.dropbox.com/s/6lbvlw8e8fexmx9/Mantle-OSX-64.zip?dl=0) (Note: Unsigned. Right click and open or change app opening permissions.) |
 [Win-32-x64](https://www.dropbox.com/s/a1ckw7ejm39jre4/Mantle-win32-x64.zip?dl=0)
@@ -13,6 +13,7 @@ Grandma wanted to live in the home that provided her many comforts and fond fami
 
 ### What it does
 Mantle provides a simple place to organize information and coordinate family to provide the highest quality of life to a loved one.
+At its core it is a data repository for people and a tool to help caregivers with various resources. Eventually it can be developed as a service to better help with its management features.
 
 ###_Features/Benefits:_
 
@@ -56,4 +57,4 @@ Push notifications.
 Email notifications.  // Currently not fully implemented
 
 **AIRSHIP AHOY!**
-[Amazing Friends](amazingfriends.airshipcms.io)
+[Amazing Friends](http://amazingfriends.airshipcms.io)
