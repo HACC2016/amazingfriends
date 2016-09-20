@@ -1,3 +1,16 @@
+<div class="row top-margin">
+  <div class="small-12">
+    <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>
+          <span class="show-for-sr">Current: </span> Maps
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
 <!-- Load Leaflet from CDN-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />
 <link rel="stylesheet" href="/assets/styles/styles.css" />
@@ -18,7 +31,7 @@
     <a href="/{{aerostat_collection.public_path}}" class="button medium">Back</a>
   </div>
 </div>
- 
+
 <div class="row medium-12 large-12 columns">
   <div class="row column" id="map">
   </div>
@@ -28,7 +41,7 @@
 </div>
 
 <!-- Jquery 2.2.2 -->
-<script src="/assets/scripts/jquery.js"></script> 
+<script src="/assets/scripts/jquery.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
 <script src="/assets/scripts/foundation.js"></script>
 <script>
@@ -41,7 +54,7 @@
 
   L.esri.basemapLayer("Streets").addTo(map);
   var geojsonLayer = new L.GeoJSON.AJAX("{{fields.arcgis_data_endpoint}}", {onEachFeature:popUp}, {style:myStyle});
-  var myStyle = {"color": "#ff7800", "weight": 4, "opacity": 0.65};       
+  var myStyle = {"color": "#ff7800", "weight": 4, "opacity": 0.65};
   geojsonLayer.addTo(map);
 
   function popUp(feature, layer) {
