@@ -57,5 +57,5 @@ Chat communications.
 Push notifications.
 Email notifications.  // Currently not fully implemented
 
-AIRSHIP AHOY!
-amazingfriends.airshipcms.io
+**AIRSHIP AHOY!**
+[Amazing Friends @ Airship](amazingfriends.airshipcms.io)
