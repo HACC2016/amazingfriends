@@ -1,10 +1,23 @@
+<div class="row top-margin">
+  <div class="small-12">
+    <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>
+          <span class="show-for-sr">Current: </span> {{fields.title}}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
 <div class="callout small">
   <div class="row column text-center">
     <h3>{{fields.title}}</h3>
-    <a href="/{{aerostat_collection.public_path}}" class="button medium">Back</a>
   </div>
 </div>
- 
+
 <div class="row medium-12 large-12 columns">
   <div class="row column">
     {{{fields.content}}}
