@@ -1,5 +1,11 @@
 # MANTLE - TEAM AMAZING FRIENDS
 
+##ACCESS IT VIA APP!
+**OSX**
+https://www.dropbox.com/s/0pfh8v0lg7rbg04/Mantle-OSX.zip?dl=0
+**WINDOWS x64**
+https://www.dropbox.com/s/c0080beyt2fhc5e/Mantle-Win.zip?dl=0
+
 ## Inspiration
 The inspiration for our app came from the experience of our own family trying their best to support grandma after losing her mobility and independence. 
 Grandma wanted to live in the home that provided her many comforts and fond family memories. Grandpa recently passed so grandma was very lonely and depressed. The family tried very hard to take care of grandma but it was stressful to coordinate care and family felt like some were investing more than others. Since group communication was done mainly through email and phone calls, it was difficult keeping the whole family on the same page. There were many arguments due to miscommunications. Everyone just wanted to care for grandma, but the stress and breakdown in family communication took away from the ability of the family to provide grandma the best support at times.
