@@ -1,9 +1,8 @@
 Mantle
  Mantle provides a simple place to organize information and coordinate family to provide the highest quality of life to a loved one
 
- Lower Stress, Higher Quality of Life 
-
-  people and processes involved in caring for someone in need - a child, a parent or loved one.
+"Less Stress, Higher Quality of Life"
+"Care and Rewarding Experience"
 
 Actionable Benefits 
   Provide the best care for your loved ones, as a family
@@ -22,7 +21,19 @@ Scarcity
 
 
 Features/Benefits
-  
+  One place to access important information
+    visiting hours
+    call hours
+    contact information for caregivers
+
+  Create to-dos and Calendar Reminders 
+    Create to-do items and  items to familys
+    Mark important dates to remember
+    Share reminders with everyone in the clan
+    From shopping list items to personal care Reminders are a great way to keep the whole family organized and engaged
+
+  Shared calendar and Scheduler
+
 
   Features
 
