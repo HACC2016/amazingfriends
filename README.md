@@ -5,7 +5,7 @@
 (Note: Unsigned. Right click and open or change app opening permissions.)
 https://www.dropbox.com/s/6lbvlw8e8fexmx9/Mantle-OSX-64.zip?dl=0
 **WINDOWS x64**
-https://www.dropbox.com/s/c0080beyt2fhc5e/Mantle-Win.zip?dl=0
+https://www.dropbox.com/s/a1ckw7ejm39jre4/Mantle-win32-x64.zip?dl=0
 
 ## Inspiration
 The inspiration for our app came from the experience of our own family trying their best to support grandma after losing her mobility and independence. 
