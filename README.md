@@ -1,6 +1,6 @@
 # MANTLE - TEAM AMAZING FRIENDS
 
-##ACCESS IT VIA APP!
+##ACCESS IT VIA DESKTOP APP!
 
 [OSX](https://www.dropbox.com/s/6lbvlw8e8fexmx9/Mantle-OSX-64.zip?dl=0) (Note: Unsigned. Right click and open or change app opening permissions.) |
 [Win-32-x64](https://www.dropbox.com/s/a1ckw7ejm39jre4/Mantle-win32-x64.zip?dl=0)
