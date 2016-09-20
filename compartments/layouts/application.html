@@ -1,0 +1,55 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MANTLE</title>
+    <link rel="stylesheet" href="/assets/styles/normalize.css">
+    <link href='/assets/styles/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="/assets/styles/override.css">
+
+  </head>
+  <body>
+  <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+
+  <div class="top-bar" id="example-menu">
+    <div class="top-bar-left">
+      <a class="menu-text uppercase" href="/">Mantle</a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+
+        <li><a href="/sign-up">Demo</a></li>
+        <li>
+          <a href="#">Resources</a>
+          <ul class="menu vertical">
+            <li><a href="/maps">Maps</a></li>
+            <li><a href="/knowledge-base">Library</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/sign-up" class="button small">Login</a>
+        </li>
+        <!-- <li>
+          <a href="/admin" class="button small hollow">Login</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  {{{ template }}}
+  <div class="row columns text-center top-margin">
+    <a class="menu" href="/">Amazing Friends ©2016</a>
+  </div>
+    <script src="/assets/scripts/jquery.js"></script>
+    <script src="/assets/scripts/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

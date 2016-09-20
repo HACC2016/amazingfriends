@@ -1,0 +1,50 @@
+.columns {
+  /*border: 2px solid black;*/
+  margin-top: 10px;
+}
+
+.center{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.top-margin{
+  margin-top: 50px;
+}
+
+.bottom-margin{
+  margin-bottom: 25px;
+}
+
+.title-header{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.circle{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin: 10px auto;
+}
+
+.person{
+  margin-top: 40px;
+}
+
+.head-profile{
+  /*border-bottom: 1px solid #ccc;*/
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 300 !important;
+}

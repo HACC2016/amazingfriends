@@ -1,5 +1,33 @@
-<div> ITEM INFO
-  <div> {{fields.title}} </div>
-  <div> {{fields.content}} </div>
-  <div> {{fields.resource_link}} </div>
+<div class="row top-margin">
+  <div class="small-12">
+    <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>
+          <span class="show-for-sr">Current: </span> {{fields.title}}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<div class="callout small">
+  <div class="row column text-center">
+    <h3>{{fields.title}}</h3>
+  </div>
+</div>
+
+<div class="row medium-12 large-12 columns">
+  <div class="row column">
+    {{{fields.content}}}
+    <div class="callout">
+      {{#each fields.resource_link_1}}
+        Source:
+        <a href="{{url}}">
+          {{caption}}
+        </a>
+      {{/each}}
+    </div>
+  </div>
 </div>
