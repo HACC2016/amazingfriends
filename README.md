@@ -14,7 +14,7 @@ Grandma wanted to live in the home that provided her many comforts and fond fami
 ### What it does
 Mantle provides a simple place to organize information and coordinate family to provide the highest quality of life to a loved one.
 
-#####_Features/Benefits:_
+###_Features/Benefits:_
 
 **Profile:**
 A place for family to organize and quickly access actionable information on medications, doctors, errands, status updates, and more. 
