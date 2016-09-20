@@ -2,7 +2,7 @@
 
 ##ACCESS IT VIA APP!
 **OSX**
-Note: Unsigned.
+(Note: Unsigned. Right click and open or change app opening permissions.)
 https://www.dropbox.com/s/6lbvlw8e8fexmx9/Mantle-OSX-64.zip?dl=0
 **WINDOWS x64**
 https://www.dropbox.com/s/c0080beyt2fhc5e/Mantle-Win.zip?dl=0
