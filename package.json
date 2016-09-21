@@ -2,9 +2,9 @@
   "name": "mantle",
   "productName": "Mantle",
   "version": "0.0.0",
-  "description": "My fine app",
+  "description": "One place to coordinate support for your loved one.",
   "license": "MIT",
-  "repository": "brandonbaris/mantle",
+  "repository": "HACC2016/amazingfriends",
   "author": {
     "name": "Brandon Baris",
     "email": "brandonbaris@gmail.com",
@@ -13,12 +13,11 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "electron-packager . --out=dist --asar --overwrite --all",
+    "buildosx" : "electron-packager . \"Mantle\" --platform=darwin --arch=x64 --version=1.4.0 --app-bundle-id=\"com.amazingfriends.mantle.osx\" --app-version=\"1.0.0\" --build-version=\"1.0.100\" --icon=mantle-icon.icns --osx-sign --overwrite —prune"
   },
   "files": [
-    "index.js",
-    "index.html",
-    "index.css"
+    "index.js"
   ],
   "keywords": [
     "electron-app",
