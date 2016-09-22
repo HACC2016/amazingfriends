@@ -69,25 +69,46 @@
                 <a href="#" class="accordion-title"><h4>Errand List</h4></a>
                 <div class="accordion-content" data-tab-content>
                   <!-- START OF TODO -->
-                  <section class="todoapp">
-                    <header class="header">
-                      <label for="new-todo">TODO</label>
-                      <input class="new-todo" placeholder="What needs to be done?" autofocus>
+                  <section id="todoapp" ng-controller="TodoCtrl">
+                    <header id="header">
+                      <h1>todos</h1>
+                      <form id="todo-form" ng-submit="addTodo()">
+                        <input id="new-todo" placeholder="What needs to be done?" ng-model="newTodo" autofocus>
+                      </form>
                     </header>
-                    <section style="display:none" class="main">
-                      <input class="toggle-all" type="checkbox">
+                    <section id="main" ng-show="totalCount" ng-cloak>
+                      <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
                       <label for="toggle-all">Mark all as complete</label>
-                      <ul class="todo-list"></ul>
-                      <footer class="footer">
-                        <span class="todo-count"></span>
-                        <div class="filters">
-                          <a href="#/" class="selected">All</a>
-                          <a href="#/active">Active</a>
-                          <a href="#/completed">Completed</a>
-                        </div>
-                        <button class="clear-completed">Clear completed</button>
-                      </footer>
+                      <ul id="todo-list">
+                        <li ng-repeat="(id, todo) in todos | todoFilter" ng-class="{completed: todo.completed, editing: todo == editedTodo}">
+                          <div class="view">
+                            <input class="toggle" type="checkbox" ng-model="todo.completed" ng-change="todos.$save(todo)">
+                            <label ng-dblclick="editTodo(todo)">{{todo.title}}</label>
+                            <button class="destroy" ng-click="removeTodo(todo)"></button>
+                          </div>
+                          <form ng-submit="doneEditing(todo)">
+                            <input class="edit" ng-model="todo.title" todo-escape="revertEditing(todo)" todo-blur="doneEditing(todo)" todo-focus="todo == editedTodo">
+                          </form>
+                        </li>
+                      </ul>
                     </section>
+                    <footer id="footer" ng-show="totalCount" ng-cloak>
+                      <span id="todo-count"><strong>{{remainingCount}}</strong>
+                        <ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+                      </span>
+                      <ul id="filters">
+                        <li>
+                          <a ng-class="{selected: location.path() == '/'} " href="#/">All</a>
+                        </li>
+                        <li>
+                          <a ng-class="{selected: location.path() == '/active'}" href="#/active">Active</a>
+                        </li>
+                        <li>
+                          <a ng-class="{selected: location.path() == '/completed'}" href="#/completed">Completed</a>
+                        </li>
+                      </ul>
+                      <button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed</button>
+                    </footer>
                   </section>
                   <!-- END OF TODO -->
                 </div>
@@ -126,4 +147,12 @@
 </div>
 
 <!-- TODO -->
-<script src="/assets/scripts/todo/bundle.js"></script>
+<script src="/assets/scripts/ngfire/firebase.js"></script>
+<script src="/assets/scripts/ngfire/fireconfig.js"></script>
+<script src="/assets/scripts/ngfire/angular.min.js"></script>
+<script src="/assets/scripts/ngfire/angularfire.min.js"></script>
+<script src="/assets/scripts/ngfire/app.js"></script>
+<script src="/assets/scripts/ngfire/controllers/todoCtrl.js"></script>
+<script src="/assets/scripts/ngfire/directives/todoFocus.js"></script>
+<script src="/assets/scripts/ngfire/directives/todoBlur.js"></script>
+<script src="/assets/scripts/ngfire/directives/todoEscape.js"></script>

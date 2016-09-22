@@ -11,3 +11,4 @@ dist/Mantle-win32-x64
 dist/Mantle-mas-x64
 dist/Mantle-darwin-x64
 tmp
+.env
