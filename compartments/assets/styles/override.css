@@ -107,3 +107,7 @@ h1, h2, h3, h4, h5, h6{
 .accordion-title{
   color: #0097A7;
 }
+
+.add-color{
+  background-color: #0097A7;
+}
